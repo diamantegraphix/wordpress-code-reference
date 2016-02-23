@@ -1,1 +1,7 @@
-
+// Add Tags to Attachments 
+// Adds a tags field for files in Media Library
+// #tags #taxonomy #attachments #media #images
+function dd_add_tags_to_attachments() {
+    register_taxonomy_for_object_type( 'post_tag', 'attachment' );
+}
+add_action( 'init' , 'dd_add_tags_to_attachments' );
